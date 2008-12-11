@@ -1,8 +1,6 @@
 from setuptools import setup, find_packages
 import sys, os
 
-# testing git and stuff
-
 version = '0.1'
 
 setup(name='tldr',
