@@ -19,8 +19,11 @@ setup(name='tldr',
       zip_safe=True,
       install_requires=[
           # -*- Extra requirements: -*-
+          "dateutil"
       ],
       entry_points="""
       # -*- Entry points: -*-
+      [console_scripts]
+      tldr=tldr.rss:main
       """,
       )
