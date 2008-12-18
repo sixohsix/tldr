@@ -5,12 +5,13 @@ from elementtree.ElementTree import parse
 
 w3mCmd = "/opt/local/bin/w3m"
 
-def getDeliciousRssAsElt(deliciousUser, count=30):
+def _getDeliciousRssAsElt(deliciousUser, count=30):
     return parse(urllib2.urlopen(
         "http://feeds.delicious.com/v2/rss/%s?count=%i" %(
             deliciousUser, count)))
 
-def getRecentLinks(rssElt, age=None):
+def getRecentLinks(deliciousUser, age=None):
+    rssElt = _getDeliciousRssAsElt(deliciousUser)
     links = []
     for elt in rssElt.findall("channel/item"):
         if (elt.find('category').text.count("tl;dr")):

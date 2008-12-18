@@ -20,7 +20,8 @@ setup(name='tldr',
       install_requires=[
           # -*- Extra requirements: -*-
           "dateutil",
-          "elementtree"
+          "elementtree",
+          "BeautifulSoup>=3.0"
       ],
       entry_points="""
       # -*- Entry points: -*-
