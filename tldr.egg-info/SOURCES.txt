@@ -1,6 +1,8 @@
 setup.cfg
 setup.py
 tldr/__init__.py
+tldr/cmdline.py
+tldr/debone.py
 tldr/rss.py
 tldr/things.py
 tldr.egg-info/PKG-INFO
@@ -8,5 +10,6 @@ tldr.egg-info/SOURCES.txt
 tldr.egg-info/dependency_links.txt
 tldr.egg-info/entry_points.txt
 tldr.egg-info/paster_plugins.txt
+tldr.egg-info/requires.txt
 tldr.egg-info/top_level.txt
 tldr.egg-info/zip-safe

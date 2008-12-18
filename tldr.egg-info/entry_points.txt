@@ -1,5 +1,5 @@
 
       # -*- Entry points: -*-
       [console_scripts]
-      tldr=tldr.rss:main
+      tldr=tldr.cmdline:main
       
