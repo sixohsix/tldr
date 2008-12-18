@@ -1,4 +1,5 @@
 
+import sys
 import os
 from elementtree.ElementTree import parse
 from urllib2 import urlopen
@@ -6,11 +7,15 @@ from urllib2 import urlopen
 from rss import *
 from debone import *
 
-
 tmp_dir = "/tmp"
 
 def main():
-    for link in getRecentLinks(getDeliciousRssAsElt('sixohsix')):
+    if (sys.argv[1:]):
+        links = [("Link", url) for url in sys.argv[1:]]
+    else:
+        links = getRecentLinks(getDeliciousRssAsElt('sixohsix'))
+
+    for link in links:
         print "====", link[0].encode('utf-8')
         print "====", link[1]
         url = link[1]

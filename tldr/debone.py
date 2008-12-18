@@ -7,5 +7,4 @@ def deboned(doc):
     for div in divs:
         if div.get("id", "").count("nav") or div.get("class", "").count("nav"):
             div.clear()
-
     return doc
